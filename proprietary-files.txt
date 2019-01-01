@@ -685,6 +685,7 @@ lib/libmmrtpdecoder.so
 lib/libmmrtpencoder.so
 lib/libOmxMux.so
 lib/libwfdavenhancements.so
+lib/libwfdclient.so
 lib/libwfdcodecv4l2.so
 lib/libwfdcommonutils.so
 lib/libwfdconfigutils.so
@@ -709,3 +710,5 @@ vendor/lib/libwfdhdcpcp.so
 vendor/lib/libwfdmmservice.so
 vendor/lib/libwfdmodulehdcpsession.so
 vendor/lib64/libwfdhdcpcp.so
+vendor/lib/libDxHdcp.so
+vendor/lib/libhdcpsrm.so
