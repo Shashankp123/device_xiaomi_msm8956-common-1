@@ -46,6 +46,13 @@ ENABLE_CPUSETS := true
 TARGET_BOOTLOADER_BOARD_NAME := msm8952
 TARGET_NO_BOOTLOADER := true
 
+#HALS
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8952
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8952
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8952
+
+# IPA
+USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 ramoops_memreserve=4M
 BOARD_KERNEL_CMDLINE += loop.max_part=7
