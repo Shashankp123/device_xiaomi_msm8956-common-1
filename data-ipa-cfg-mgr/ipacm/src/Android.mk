@@ -7,6 +7,7 @@ BOARD_IPAv3_LIST += sdm845
 BOARD_IPAv3_LIST += sdm710
 BOARD_IPAv3_LIST += msmnile
 BOARD_IPAv3_LIST += $(MSMSTEPPE)
+BOARD_IPAv3_LIST += $(TRINKET)
 
 ifneq ($(call is-board-platform-in-list,$(BOARD_PLATFORM_LIST)),true)
 ifneq (,$(filter $(QCOM_BOARD_PLATFORMS),$(TARGET_BOARD_PLATFORM)))
@@ -24,20 +25,10 @@ LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_CFLAGS := -v
 LOCAL_CFLAGS += -DFEATURE_IPA_ANDROID
 LOCAL_CFLAGS += -DFEATURE_IPACM_RESTART
-LOCAL_CFLAGS += -DFEATURE_IPACM_HAL
-LOCAL_CFLAGS += \
-        -Wall \
-        -Werror \
-        -Wno-constant-logical-operand \
-        -Wno-format \
-        -Wno-missing-field-initializers \
-        -Wno-sign-compare \
-        -Wno-sometimes-uninitialized \
-        -Wno-unused-parameter \
-        -Wno-unused-value \
-        -Wno-unused-variable \
-        -Wno-writable-strings \
-        -Wno-error=implicit-fallthrough
+
+LOCAL_CFLAGS += -DFEATURE_ETH_BRIDGE_LE
+
+LOCAL_CFLAGS += -DFEATURE_IPACM_HAL -Wall -Werror -Wno-error=macro-redefined
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 LOCAL_CFLAGS += -DDEBUG
 endif
@@ -70,7 +61,8 @@ LOCAL_SRC_FILES := IPACM_Main.cpp \
 		IPACM_ConntrackClient.cpp \
 		IPACM_ConntrackListener.cpp \
 		IPACM_Log.cpp \
-		IPACM_OffloadManager.cpp
+		IPACM_OffloadManager.cpp \
+		IPACM_LanToLan.cpp
 
 LOCAL_MODULE := ipacm
 LOCAL_CLANG := false
