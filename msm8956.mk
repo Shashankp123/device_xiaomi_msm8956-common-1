@@ -424,7 +424,8 @@ PRODUCT_PACKAGES += \
 
 #Soong
 PRODUCT_SOONG_NAMESPACES += \
-    devie/xiaomi/msm8956-common
+    device/xiaomi/msm8956-common \
+    device/xiaomi/kenzo
 
 # Sound trigger
 PRODUCT_COPY_FILES += \
