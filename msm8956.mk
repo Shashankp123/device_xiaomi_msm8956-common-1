@@ -420,15 +420,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service.widevine
 
-# VR
-PRODUCT_PACKAGES += \
-    android.hardware.vr@1.0-impl:64 \
-    android.hardware.vr@1.0-service \
-    vr.msm8952
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.vr.high_performance.xml:system/etc/permissions/android.hardware.vr.high_performance.xml
-
 #Soong
 PRODUCT_SOONG_NAMESPACES += \
     devie/xiaomi/msm8956-common
