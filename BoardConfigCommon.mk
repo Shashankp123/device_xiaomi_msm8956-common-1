@@ -202,9 +202,6 @@ TARGET_HAS_NO_WLAN_STATS := true
 # Properties
 TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 
-# Qualcomm
-BOARD_USES_QCOM_HARDWARE := true
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
