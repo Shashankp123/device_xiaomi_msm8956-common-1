@@ -134,10 +134,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
-#BOARD
-PRODUCT_USES_QCOM_HARDWARE := true
-PRODUCT_BOARD_PLATFORM := msm8956
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
@@ -199,8 +195,8 @@ PRODUCT_PACKAGES += \
     org.codeaurora.camera
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.0-service-custom
+#PRODUCT_PACKAGES += \
+#    android.hardware.biometrics.fingerprint@2.0-service-custom
 
 # FM
 PRODUCT_PACKAGES += \
@@ -338,11 +334,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinyxml \
     libxml2
-
-# QTI performance
- PRODUCT_BOOT_JARS += \
-     QPerformance \
-     UxPerformance
 
 # Ramdisk
 PRODUCT_PACKAGES += \
