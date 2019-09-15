@@ -248,7 +248,9 @@ PRODUCT_PACKAGES += \
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml
+    IPACM_cfg.xml \
+    libipanat \
+    liboffloadhal
 
 # IPC router config
 PRODUCT_COPY_FILES += \
