@@ -91,8 +91,8 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@5.0 \
-    android.hardware.audio@5.0-impl \
+    android.hardware.audio@4.0 \
+    android.hardware.audio@4.0-impl \
     android.hardware.audio.common@4.0 \
     android.hardware.audio.common@4.0-util \
     android.hardware.audio@2.0-service \
